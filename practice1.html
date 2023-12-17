@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            background-color: grey;
+
+        }
+
+        .container{
+            width: 60vw;
+            height: 60vh;
+            border: 2px solid black;
+            background-color: white;
+            margin: auto;
+            position: relative;
+            border-radius: 40px;
+            top: 10vh;
+        }
+        .question{
+            width: 40vw;
+            height: 10vh;
+            color: black;
+            font-family: monospace;
+            /* border: 2px solid black; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            font-size: 25px;
+            position: relative;
+            top: 4vh;
+            /* flex-wrap: wrap; */
+        }
+        .yes, .no{
+            width: 7vw;
+            height: 6vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            color: white;
+            border-radius: 30px;
+            
+        }
+        .yes{
+            position: relative;
+            top: 20vh;
+            left: 15vw;
+        }
+        .no{
+            position: relative;
+            top: 14vh;
+           
+            left: 38vw;
+        }
+        .no:hover{
+            top:30vh;
+            left:20vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="question">Will you buy me a gaming pc Reem?</div>
+        <button class="yes" >HELL YEAH</button>
+        <button class="no">NUH UH</button>
+    </div>
+
+    <script>
+        const yes = document.querySelector('.yes')
+        yes.addEventListener('click',()=>{
+            document.querySelector('.question').style.display = 'none'
+            document.querySelector('.yes').style.display = 'none'
+            document.querySelector('.no').style.display = 'none'
+            document.querySelector('.container').style.backgroundImage = "url('phool.jpeg')";
+            document.querySelector('.container').style.backgroundRepeat = 'no-repeat'
+            document.querySelector('.container').style.backgroundSize = '100% 100%'
+           
+             
+
+        })
+    </script>
+</body>
+</html>
